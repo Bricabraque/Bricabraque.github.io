@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Bricabrac</title><link href="https://bricabrac.grainedutopie.eu/" rel="alternate"></link><link href="https://bricabrac.grainedutopie.eu/feeds/all.atom.xml" rel="self"></link><id>https://bricabrac.grainedutopie.eu/</id><updated>2017-02-23T00:00:00+01:00</updated><entry><title>how to git</title><link href="https://bricabrac.grainedutopie.eu/how-to-git.html" rel="alternate"></link><published>2017-02-23T00:00:00+01:00</published><updated>2017-02-23T00:00:00+01:00</updated><author><name>bricabrac</name></author><id>tag:bricabrac.grainedutopie.eu,2017-02-23:/how-to-git.html</id><summary type="html">&lt;p&gt;Depuis peu de temps, je me suis inscrit sur &lt;a href="https://github.com"&gt;Github&lt;/a&gt; afin de contribuer à la traduction de divers projets de logiciels libres. Bien que je connaissais déjà le principe, l'utilisation propre du logiciel de versionning git m'a toujours semblé complexe et tiré par les cheveux. Mais ces derniers jours, je …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Depuis peu de temps, je me suis inscrit sur &lt;a href="https://github.com"&gt;Github&lt;/a&gt; afin de contribuer à la traduction de divers projets de logiciels libres. Bien que je connaissais déjà le principe, l'utilisation propre du logiciel de versionning git m'a toujours semblé complexe et tiré par les cheveux. Mais ces derniers jours, je m'y suis mis sérieusement et j'apprends petit à petit à me familiariser avec les diverses commandes.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Bricabrac</title><link href="https://bricabrac.grainedutopie.eu/" rel="alternate"></link><link href="https://bricabrac.grainedutopie.eu/feeds/all.atom.xml" rel="self"></link><id>https://bricabrac.grainedutopie.eu/</id><updated>2017-02-23T00:00:00+01:00</updated><entry><title>how to git</title><link href="https://bricabrac.grainedutopie.eu/how-to-git.html" rel="alternate"></link><published>2017-02-23T00:00:00+01:00</published><updated>2017-02-23T00:00:00+01:00</updated><author><name>bricabrac</name></author><id>tag:bricabrac.grainedutopie.eu,2017-02-23:/how-to-git.html</id><summary type="html">&lt;p&gt;Depuis peu de temps, je me suis inscrit sur &lt;a href="https://github.com"&gt;Github&lt;/a&gt; afin de contribuer à la traduction de divers projets de logiciels libres. Bien que je connaissais déjà le principe, l'utilisation propre du logiciel de gestion de versions &lt;em&gt;git&lt;/em&gt; m'a toujours semblé complexe et tiré par les cheveux. Mais ces derniers …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Depuis peu de temps, je me suis inscrit sur &lt;a href="https://github.com"&gt;Github&lt;/a&gt; afin de contribuer à la traduction de divers projets de logiciels libres. Bien que je connaissais déjà le principe, l'utilisation propre du logiciel de gestion de versions &lt;em&gt;git&lt;/em&gt; m'a toujours semblé complexe et tiré par les cheveux. Mais ces derniers jours, je m'y suis mis sérieusement et j'apprends petit à petit à me familiariser avec les diverses commandes.&lt;/p&gt;
 &lt;p&gt;Je présenterai ici un pense-bête du workflow que j'utilise quand je contribue à des projets dont je ne suis pas l'initiateur; quasiment tous, donc.&lt;/p&gt;
 &lt;h1&gt;Fork et clonage du dépôt distant&lt;/h1&gt;
 &lt;p&gt;Après avoir forké le dépôt original du projet concerné sur la plateforme Github, il faut cloner le dépôt du fork en local.&lt;/p&gt;
@@ -15,10 +15,10 @@ cd &amp;lt;dossier-du-fork&amp;gt;
 
 
 &lt;p&gt;Si on vérifie la configuration des dépôt distants avec la commande &lt;code&gt;git remote -v&lt;/code&gt;, on devrait avoir ça :&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;origin  https://adresse-du-fork.git (fetch)
-origin  https://adresse-du-fork.git (push)
-upstream    https://adresse-du-projet-original.git (fetch)
-upstream    https://adresse-du-projet-original.git (push)
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;origin  https://fork.git (fetch)
+origin  https://fork.git (push)
+upstream    https://projet-original.git (fetch)
+upstream    https://projet-original.git (push)
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -69,7 +69,77 @@ git branch &amp;lt;nouvelle-branche&amp;gt;
 
 
 &lt;hr&gt;
-&lt;p&gt;Dernière modification le 23 février 2017.&lt;/p&gt;</content></entry><entry><title>perspectives</title><link href="https://bricabrac.grainedutopie.eu/perspectives.html" rel="alternate"></link><published>2016-12-14T00:00:00+01:00</published><updated>2016-12-14T00:00:00+01:00</updated><author><name>bricabrac</name></author><id>tag:bricabrac.grainedutopie.eu,2016-12-14:/perspectives.html</id><summary type="html">&lt;p&gt;Je n’aime pas travailler. Du moins, je n’aime pas travailler sous la contrainte d’une hiérarchie ; sous la pression qu’implique la relation concurentielle entre les entreprises, sacro-saint principe du libéralisme économique et du mode de production capitaliste ; sous le poids d’un travail désagréable ou non épanouissant …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Je n’aime pas travailler. Du moins, je n’aime pas travailler sous la contrainte d’une hiérarchie ; sous la pression qu’implique la relation concurentielle entre les entreprises, sacro-saint principe du libéralisme économique et du mode de production capitaliste ; sous le poids d’un travail désagréable ou non épanouissant, simplement.&lt;/p&gt;
+&lt;p&gt;Dernière modification le 23 février 2017.&lt;/p&gt;</content></entry><entry><title>how to git</title><link href="https://bricabrac.grainedutopie.eu/how-to-git-en.html" rel="alternate"></link><published>2017-02-23T00:00:00+01:00</published><updated>2017-02-23T00:00:00+01:00</updated><author><name>bricabrac</name></author><id>tag:bricabrac.grainedutopie.eu,2017-02-23:/how-to-git-en.html</id><summary type="html">&lt;p&gt;For a few days, I have signed up for a &lt;a href="https://github.com"&gt;Github&lt;/a&gt; in order to contribute to the translation of diverse free-software projects. Even though I have already known its main idea, the proper using of the version control system &lt;em&gt;git&lt;/em&gt; has always seemed to me as a complex and far-fetched …&lt;/p&gt;</summary><content type="html">&lt;p&gt;For a few days, I have signed up for a &lt;a href="https://github.com"&gt;Github&lt;/a&gt; in order to contribute to the translation of diverse free-software projects. Even though I have already known its main idea, the proper using of the version control system &lt;em&gt;git&lt;/em&gt; has always seemed to me as a complex and far-fetched process. However, I have seriously dug into it these least few days and have been gradually getting used to the various commands.&lt;/p&gt;
+&lt;p&gt;I will draw here a brief reminder of the workflow that I have learnt and that I currently use when I contribute to a project which I am not the owner; that is, nearly all of them.&lt;/p&gt;
+&lt;h1&gt;Forking et cloning the remote repository&lt;/h1&gt;
+&lt;p&gt;After forking the original project repository on Github, we need to clone the fork repo locally.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd path/of/your/working/dir
+git clone &amp;lt;fork-url&amp;gt;
+cd &amp;lt;fork-dir&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then we add a remote that will be named &lt;code&gt;upstream&lt;/code&gt; with the upstream repo's url.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git remote add upstream &amp;lt;upstream-repo-url&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If we check the remots with &lt;code&gt;git remote -v&lt;/code&gt;, the terminal should return these lines :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;origin  https://fork.git (fetch)
+origin  https://fork.git (push)
+upstream    https://upstream-repo.git (fetch)
+upstream    https://upstream-repo.git (push)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1&gt;Making changes&lt;/h1&gt;
+&lt;p&gt;Here are the steps which follow the changing.&lt;/p&gt;
+&lt;p&gt;We update locally from the upstream repo and we create a new branch for the commit-to-be :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git fetch upstream
+git branch &amp;lt;new-branch&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We add the modified files to push to the commit queue :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git add &amp;lt;modified-file&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Commit :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git commit -m &amp;quot;Commit message&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We push the commit to the fork repo we own :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git push origin &amp;lt;new-branch&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We complete the operation by going back on Github to issue a pull request from the fork to the upstream repository.&lt;/p&gt;
+&lt;h1&gt;Syncing a fork&lt;/h1&gt;
+&lt;p&gt;At that stage, let us say the pull has been merged into the upstream repository by its owner. We now sync the fork with the upstream repo in order to be up-to-date.&lt;/p&gt;
+&lt;p&gt;We fetch the updates from upstream :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git fetch upstream
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We go back to the master branch :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git checkout master
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We merge the upstream/master branch with the local master branch :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git merge upstream/master
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And we push all the stuff to the remote fork :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git push origin master
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr&gt;
+&lt;p&gt;Last edit on 23 february 2017.&lt;/p&gt;</content></entry><entry><title>perspectives</title><link href="https://bricabrac.grainedutopie.eu/perspectives.html" rel="alternate"></link><published>2016-12-14T00:00:00+01:00</published><updated>2016-12-14T00:00:00+01:00</updated><author><name>bricabrac</name></author><id>tag:bricabrac.grainedutopie.eu,2016-12-14:/perspectives.html</id><summary type="html">&lt;p&gt;Je n’aime pas travailler. Du moins, je n’aime pas travailler sous la contrainte d’une hiérarchie ; sous la pression qu’implique la relation concurentielle entre les entreprises, sacro-saint principe du libéralisme économique et du mode de production capitaliste ; sous le poids d’un travail désagréable ou non épanouissant …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Je n’aime pas travailler. Du moins, je n’aime pas travailler sous la contrainte d’une hiérarchie ; sous la pression qu’implique la relation concurentielle entre les entreprises, sacro-saint principe du libéralisme économique et du mode de production capitaliste ; sous le poids d’un travail désagréable ou non épanouissant, simplement.&lt;/p&gt;
 &lt;p&gt;Faire ces considérations quand on est encore étudiant et que son expérience au boulot se résume à quelques stages et deux trois contrats saisonniers, ça a de quoi faire broyer du noir. Pas encore totalement rentré dans le rang du salariat, et déjà blasé.&lt;/p&gt;
 &lt;p&gt;En fait non. Je parle de salariat, mais lorsque l’on est étudiant et que pas mal de portes nous restent encore ouvertes grâce à notre niveau d’instruction, on nous fait aussi miroiter d’autres modes d’aliénation au travail : l’auto-entrepreneuriat, la recherche et l’enseignement universitaires, voire le salariat « éthique » dans des boîtes jeunes, branchées, dynamiques, où ça mange bio, où ça vote à gauche mais pas trop parce que les extrêmes c’est le mal, etc.&lt;/p&gt;
 &lt;p&gt;Et c’est bien de ça que je veux parler : cette situation où, de par son niveau d’instruction universitaire et a fortiori de son capital culturel, on s’apprête à rentrer, malgré soi, dans la classe bâtarde que certains et certaines appelleront la classe moyenne : consciente des privilèges des classes supérieures, mais pas des siens ; consciente des problèmes environnementaux, politiques et sociaux, mais sans se rendre compte de sa participation aux dits problèmes.&lt;/p&gt;
