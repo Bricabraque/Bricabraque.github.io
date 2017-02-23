@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Bricabrac - informatique</title><link href="https://bricabrac.grainedutopie.eu/" rel="alternate"></link><link href="https://bricabrac.grainedutopie.eu/feeds/informatique.atom.xml" rel="self"></link><id>https://bricabrac.grainedutopie.eu/</id><updated>2017-02-23T00:00:00+01:00</updated><entry><title>how to git</title><link href="https://bricabrac.grainedutopie.eu/how-to-git.html" rel="alternate"></link><published>2017-02-23T00:00:00+01:00</published><updated>2017-02-23T00:00:00+01:00</updated><author><name>bricabrac</name></author><id>tag:bricabrac.grainedutopie.eu,2017-02-23:/how-to-git.html</id><summary type="html">&lt;p&gt;Depuis peu de temps, je me suis inscrit sur &lt;a href="https://github.com"&gt;Github&lt;/a&gt; afin de contribuer à la traduction de divers projets de logiciels libres. Bien que je connaissais déjà le principe, l'utilisation propre du logiciel de versionning git m'a toujours semblé complexe et tiré par les cheveux. Mais ces derniers jours, je …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Depuis peu de temps, je me suis inscrit sur &lt;a href="https://github.com"&gt;Github&lt;/a&gt; afin de contribuer à la traduction de divers projets de logiciels libres. Bien que je connaissais déjà le principe, l'utilisation propre du logiciel de versionning git m'a toujours semblé complexe et tiré par les cheveux. Mais ces derniers jours, je m'y suis mis sérieusement et j'apprends petit à petit à me familiariser avec les diverses commandes.&lt;/p&gt;
+&lt;p&gt;Je présenterai ici un pense-bête du workflow que j'utilise quand je contribue à des projets dont je ne suis pas l'initiateur; quasiment tous, donc.&lt;/p&gt;
+&lt;h1&gt;Fork et clonage du dépôt distant&lt;/h1&gt;
+&lt;p&gt;Après avoir forké le dépôt original du projet concerné sur la plateforme Github, il faut cloner le dépôt du fork en local.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd chemin/de/votre/dossier/de/travail
+git clone &amp;lt;adresse-du-fork&amp;gt;
+cd &amp;lt;dossier-du-fork&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;On ajoute un dépôt distant qu'on nommera &lt;code&gt;upstream&lt;/code&gt; avec l'adresse du dépôt upstream.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git remote add upstream &amp;lt;adresse-du-dépôt-upstream&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Si on vérifie la configuration des dépôt distants avec la commande &lt;code&gt;git remote -v&lt;/code&gt;, on devrait avoir ça :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;origin  https://adresse-du-fork.git (fetch)
+origin  https://adresse-du-fork.git (push)
+upstream    https://adresse-du-projet-original.git (fetch)
+upstream    https://adresse-du-projet-original.git (push)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1&gt;Faire des modifications&lt;/h1&gt;
+&lt;p&gt;Voici les étapes que suivront les modifications faites.&lt;/p&gt;
+&lt;p&gt;On met à jour depuis le dépôt upstream et on crée une nouvelle branche pour le futur commit :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git fetch upstream
+git branch &amp;lt;nouvelle-branche&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;On ajoute les fichiers à pousser dans la liste d'attente :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git add &amp;lt;fichier-modifié&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;On commit :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git commit -m &amp;quot;Message du commit&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;On pousse le commit sur le dépôt du fork, qui nous appartient :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git push origin &amp;lt;nouvelle-branche&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;On termine en retournant sur Github pour faire une pull request depuis le fork vers le dépôt upstream.&lt;/p&gt;
+&lt;h1&gt;Synchronisation du fork&lt;/h1&gt;
+&lt;p&gt;Imaginons qu'à ce stade, la pull request a été fusionnée dans le dépôt upstream par son propriétaire. On va maintenant synchroniser le fork avec le dépôt upstream pour être jour dans les commits.&lt;/p&gt;
+&lt;p&gt;On récupère les mise à jour depuis upstream :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git fetch upstream
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;On retourne dans la branche master :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git checkout master
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;On fusionne la branche upstream/master avec la branche master locale :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git merge upstream/master
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;On pousse tout ça sur le fork distant :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git push origin master
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr&gt;
+&lt;p&gt;Dernière modification le 23 février 2017.&lt;/p&gt;</content></entry></feed>
