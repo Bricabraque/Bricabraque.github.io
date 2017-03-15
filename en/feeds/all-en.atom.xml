@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Bricabrac</title><link href="https://bricabrac.grainedutopie.eu/en/" rel="alternate"></link><link href="https://bricabrac.grainedutopie.eu/feeds/all-en.atom.xml" rel="self"></link><id>https://bricabrac.grainedutopie.eu/en/</id><updated>2017-02-23T00:00:00+01:00</updated><entry><title>how to git</title><link href="https://bricabrac.grainedutopie.eu/en/how-to-git.html" rel="alternate"></link><published>2017-02-23T00:00:00+01:00</published><updated>2017-02-23T00:00:00+01:00</updated><author><name>bricabrac</name></author><id>tag:bricabrac.grainedutopie.eu,2017-02-23:/en/how-to-git.html</id><summary type="html">&lt;p&gt;For a few days, I have signed up for a &lt;a href="https://github.com"&gt;Github&lt;/a&gt; in order to contribute to the translation of diverse free-software projects. Even though I have already known its main idea, the proper using of the git version control system has always seemed to me as a complex and far-fetched …&lt;/p&gt;</summary><content type="html">&lt;p&gt;For a few days, I have signed up for a &lt;a href="https://github.com"&gt;Github&lt;/a&gt; in order to contribute to the translation of diverse free-software projects. Even though I have already known its main idea, the proper using of the git version control system has always seemed to me as a complex and far-fetched process. However, I have seriously dug into it these least few days and have been gradually getting used to the various commands.&lt;/p&gt;
+&lt;p&gt;I will draw here a brief reminder of the workflow that I have learnt and that I currently use when I contribute to a project which I am not the owner; that is, nearly all of them.&lt;/p&gt;
+&lt;h1&gt;Forking et cloning the remote repository&lt;/h1&gt;
+&lt;p&gt;After forking the original project repository on Github, we need to clone the fork repo locally.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd path/of/your/working/dir
+git clone &amp;lt;fork-url&amp;gt;
+cd &amp;lt;fork-dir&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then we add a remote that will be named &lt;code&gt;upstream&lt;/code&gt; with the upstream repo's url.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git remote add upstream &amp;lt;upstream-repo-url&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If we check the remots with &lt;code&gt;git remote -v&lt;/code&gt;, the terminal should return these lines :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;origin  https://fork.git (fetch)
+origin  https://fork.git (push)
+upstream    https://upstream-repo.git (fetch)
+upstream    https://upstream-repo.git (push)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1&gt;Making changes&lt;/h1&gt;
+&lt;p&gt;Here are the steps which follow the changing.&lt;/p&gt;
+&lt;p&gt;We update locally from the upstream repo and we create a new branch for the commit-to-be :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git fetch upstream
+git branch &amp;lt;new-branch&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We add the modified files to push to the commit queue :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git add &amp;lt;modified-file&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Commit :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git commit -m &amp;quot;Commit message&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We push the commit to the fork repo we own :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git push origin &amp;lt;new-branch&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We complete the operation by going back on Github to issue a pull request from the fork to the upstream repository.&lt;/p&gt;
+&lt;h1&gt;Syncing a fork&lt;/h1&gt;
+&lt;p&gt;At that stage, let us say the pull has been merged into the upstream repository by its owner. We now sync the fork with the upstream repo in order to be up-to-date.&lt;/p&gt;
+&lt;p&gt;We fetch the updates from upstream :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git fetch upstream
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We go back to the master branch :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git checkout master
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We merge the upstream/master branch with the local master branch :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git merge upstream/master
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And we push all the stuff to the remote fork :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git push origin master
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr&gt;
+&lt;p&gt;Last edit on 23 february 2017.&lt;/p&gt;</content></entry><entry><title>perspectives</title><link href="https://bricabrac.grainedutopie.eu/en/perspectives.html" rel="alternate"></link><published>2016-12-14T00:00:00+01:00</published><updated>2016-12-14T00:00:00+01:00</updated><author><name>bricabrac</name></author><id>tag:bricabrac.grainedutopie.eu,2016-12-14:/en/perspectives.html</id><summary type="html">&lt;p&gt;I do not like to work. At least, I do not like to work when constrained by a hierarchy ; under pressure from the competitive relationship between companies, the sacrosanct principle of economic liberalism and capitalist mode of production ; burdened by the weight of an unpleasant and unfulfilling job.&lt;/p&gt;
+&lt;p&gt;To make …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I do not like to work. At least, I do not like to work when constrained by a hierarchy ; under pressure from the competitive relationship between companies, the sacrosanct principle of economic liberalism and capitalist mode of production ; burdened by the weight of an unpleasant and unfulfilling job.&lt;/p&gt;
+&lt;p&gt;To make these consideratons while we are still a student without any working experience but a few internship and roughly two or three seasonal contracts is likely to make you feel down. Not yet fully entered in the labour market as an employee but already blasé.&lt;/p&gt;
+&lt;p&gt;Actually no. I am talking about being an employee, but when you are a student with all the doors that are still open to you—thanks to your educational level—people are trying to lure you with other shapes of alienation at work: self-entrepreneurship, academic research or teaching, even 'ethical' wage-earning within young, trendy, dynamic, bio-friendly, leftist-but-not-too-far-because-extremes-are-evil companies.&lt;/p&gt;
+&lt;p&gt;And this is what I want to talk about: this situation where, because of your academic educational background and a fortiori your cultural capital, you are to enter, unwillingly, the hybrid class which some would call the medium class: aware of the upper class privilege, but not aware of theirs ; aware of environmental, political and social issues, but without appreciate their incidence on the said issues. &lt;/p&gt;
+&lt;p&gt;Here are the questions I am hardly able to answer to being a student and considering my beliefs: can I follow the pattern which I have been pre-determined to follow since I reached college—research and teaching—while maintaining a class consciousness? Aren't I to forget unavoidably that the acamedic status would have provided me new privilege to enjoy? Will I still have an enough critical thinking to take into account my social position in my vision in order not to be biased by a social confinement?&lt;/p&gt;
+&lt;p&gt;My fear is precisely that of believing that my educational level would allow me to work and still have a fulfilling life, because I would have the opportunity to do something that pleases me. For it is exactly the feeling that I get from the medium class, to which I already belong more or less: that of a class which is not aware of its position within the social hierarchy. This blindness is doubtless one of the reasons why any revolutionary process remains impossible today: how can it be possible to envisage another society whitout being conscious of the alienations from which we suffer and that we inflict to the others? Above all, how can it be possible to realize the urgent need of a societal shift?&lt;/p&gt;
+&lt;p&gt;In a sense, my interrogations about my immediate future illustrate the class struggle on my scale: even though I can find a strictly intellectual interest in pursuing my education up to the PhD and take pleasure in it, pride is also likely to make me seek a higher social status. I always refer this very consideration to an article published on an issue of CQFD, titled &lt;a href="http://cqfd-journal.org/Refus-de-parvenir"&gt;"Le refus de parvenir"&lt;/a&gt; (Iffik Le Guen, avril 2016), discussing the conscious refusal of seeking a higher social status within a system, quite often through work: kinf of an inverted ambition.&lt;/p&gt;
+&lt;p&gt;Should I follow my interest in intellectual knowledge while hoping to keep my critical eye and my class consciousness, and use this knowledge in concrete forms of resistance, or should I turn now to more basic projects and closer to the struggle in a perspective of refusal to contribute to a system which revulses me?&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;PS : Here is an answer written by Adonis Loisot on his &lt;em&gt;Capharnaüm cacographique&lt;/em&gt;: &lt;a href="https://caca.grainedutopie.eu/perspectives.html"&gt;Perspectives d'un universitaire aliéné&lt;/a&gt;.&lt;/p&gt;</content></entry></feed>
